@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  body{
+      width: 100%;
+      height: 100vh;
+      background-image: url(../images/back-gg.jpg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+  }
+  /* .logo{
+      width: 150px;
+      cursor: pointer;
+  }
+  .nav-bar{
+      width: 70%;
+      height: 15%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+  } */
+  #sign-up{
+      color: white;
+      padding: 10px 25px;
+      background: transparent;
+      border: none;
+      border-radius: 20px;
+      outline: none;
+      cursor: pointer;
+      background-color: #797A72;
+  }
+  
+  #sign-in{
+      color: white;
+      padding: 10px 25px;
+      background: transparent;
+      border: none;
+      border-radius: 20px;
+      outline: none;
+      cursor: pointer;
+      background-color: #218838;
+  }
+  
+  .content{
+      color: #FFFFFF;
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      transform: translateY(-50%);
+      z-index: 2;
+  }
+  .content p{
+      font-family: Arial;
+  }
+  .h11{
+      font-size: 80px;
+      font-weight: bolder;
+  }
+  #h4h{
+      left: 10%;
+  }
+  #sign-in:hover{
+      background-color: #0A7287;
+      color: white;
+  }
+  #form{
+      width: 300px;
+      height: 380px;
+      display: absolute;
+      position: absolute;
+      top: 1%;
+      right: -50%;
+      color: white;
+      background: linear-gradient(to top,rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+      border-radius: 10px;
+      padding: 25px;
+  }
+  #form button{
+      width: 250px;
+  }
+  #sign-up:hover{
+      background-color: #891B27;
+  }
+  #sign-form{
+      color: white;
+      padding: 10px 25px;
+      background: transparent;
+      border: none;
+      border-radius: 20px;
+      outline: none;
+      cursor: pointer;
+      background-color: #596442;
+  }
+  #sign-form:hover{
+      background-color: #CB8F60;
+  }
+  #social{
+      width: 100px;
+      height: 100px;
+      left: 100px;
+      display: absolute;
+      position: absolute;
+      background-color: transparent;
+      top: 80%;
+      padding: 25px;
+  }
+  .orcontinue{
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+  }

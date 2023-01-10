@@ -1,0 +1,11 @@
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+.nav-bar{
+    width: 85%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
