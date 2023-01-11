@@ -18,6 +18,7 @@ const LandingPage = () => {
   return (
     <div>
       {/* <Navbar /> */}
+      <h1> I did nothing today </h1>
       <div className="content">
         <small>Sire Welcome to</small>
         <h1 className="h11">Books World</h1>
