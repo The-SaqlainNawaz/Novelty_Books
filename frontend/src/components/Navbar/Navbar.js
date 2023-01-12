@@ -1,11 +1,15 @@
 import React from "react";
-import img from "../../images/images-removebg-preview.png";
 import "../../pages/style.css";
-
+import { signOutUser } from "../../Redux/CureentUser/CurrentUserSlice";
+import { useDispatch } from "react-redux";
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const signout = () => {
+    dispatch(signOutUser);
+  };
   return (
     <div class="nav-bar">
-      <img src={img} class="logo"></img>
+      <button>SignOut</button>
     </div>
   );
 };

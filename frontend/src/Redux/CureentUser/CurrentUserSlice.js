@@ -1,6 +1,6 @@
 //create slice
 import { createSlice } from "@reduxjs/toolkit";
-import { useEffect } from "react";
+import { Navigate } from "react-router-dom";
 import {
   GoogleAuthProvider,
   signInWithPopup,
@@ -11,6 +11,7 @@ import {
 import { auth } from "../../Firebase/configFirebase";
 
 const initialState = {
+  userExist: false,
   currentUser: [
     {
       displayName: "",
@@ -24,22 +25,19 @@ const currentUserSlice = createSlice({
   name: "currentUser",
   initialState,
   reducers: {
-    signin: () => {
+    signin: (state) => {
       const provider = new GoogleAuthProvider();
       signInWithPopup(auth, provider);
-      // signInWithRedirect(auth, provider)
+      console.log(auth.currentUser);
+      state.userExist = true;
     },
-    setCurrentuser: (state) => {
-      const unsubscribe = onAuthStateChanged(auth, (cUser) => {
-        console.log(cUser.displayName);
-        state.currentUser.displayName = cUser.displayName;
-        state.currentUser.email = cUser.email;
-        state.currentUser.uid = cUser.uid;
-        // console.log("User", state.currentUser);
-      });
+    signOutUser: (state) => {
+      auth.signOut();
+      state.userExist = false;
+      console.log(state.userExist);
     },
   },
 });
 
-export const { signin, setCurrentuser } = currentUserSlice.actions;
+export const { signin, signOutUser } = currentUserSlice.actions;
 export default currentUserSlice.reducer;
