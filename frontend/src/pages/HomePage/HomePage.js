@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div>
       <Navbar />
-      HomePage
+      HomePageee
       <div>Hello {auth.currentUser.displayName}</div>
     </div>
   );

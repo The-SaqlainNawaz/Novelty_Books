@@ -18,6 +18,7 @@ const LandingPage = () => {
   };
   return (
     <div>
+      <h1>Something wrong with auth</h1>
       {auth ? (
         <Navigate to="/home" />
       ) : (
