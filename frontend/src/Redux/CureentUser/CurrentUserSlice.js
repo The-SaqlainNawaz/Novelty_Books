@@ -4,9 +4,6 @@ import { Navigate } from "react-router-dom";
 import {
   GoogleAuthProvider,
   signInWithPopup,
-  signInWithRedirect,
-  signOut,
-  onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../../Firebase/configFirebase";
 

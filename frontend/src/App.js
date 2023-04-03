@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LandingPage from "./pages/LandingPage";
+import LandingPage from "./pages/EnteryPoint";
 import Home from "./pages/HomePage/HomePage";
 
 function App() {
