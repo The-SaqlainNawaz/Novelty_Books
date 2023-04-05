@@ -19,7 +19,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "nodemon react-scripts start",
+    "start": "react-scripts start",
     "test": "react-scripts test"
   },
   "eslintConfig": {

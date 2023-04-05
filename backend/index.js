@@ -1,13 +1,25 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
+import router from "./routers/routes.js";
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+app.use("/", router);
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-app.listen(5000, () => console.log("Server started on port 5000"));
+mongoose.set("strictQuery", false);
+mongoose
+  .connect(process.env.CONNECTION_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() =>
+    app.listen(process.env.PORT, () =>
+      console.log(`Server running on port: ${process.env.PORT}`)
+    )
+  )
+  .catch((error) => console.log(error.message));

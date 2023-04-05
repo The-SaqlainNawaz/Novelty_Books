@@ -6,17 +6,16 @@ import ReactLoading from "react-loading";
 const HomePage = () => {
   const [currentUser, setcurrentUser] = React.useState(null);
   useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        setcurrentUser(user.displayName);
-      } else {
-        console.log("user is not signed in");
-      }
-    });
+    if (auth.currentUser) {
+      setcurrentUser(auth.currentUser.displayName);
+    } else {
+      console.log("user is not signed in");
+    }
   }, []);
+
   return (
     <>
-      {currentUser ? (
+      {auth.currentUser ? (
         <div style={{ color: "white" }}>
           <Navbar />
           HomePageee

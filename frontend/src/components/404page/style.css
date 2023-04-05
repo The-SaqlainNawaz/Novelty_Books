@@ -1,0 +1,25 @@
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.error{
+    /* make it center */
+    margin: auto;
+    /* make it 50% of the screen */
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(8, 8, 8);
+  }
+  .text{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }

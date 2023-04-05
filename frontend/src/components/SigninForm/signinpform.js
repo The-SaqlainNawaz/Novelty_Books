@@ -1,11 +1,11 @@
-import "../../pages/style.css";
+import "../SigninForm/style.css";
 
-const signupform = () => {
+const signinform = () => {
   return (
     <div className="card" id="form">
-      <form>
+      <form className="d">
         <div className="form-group">
-          <label htmlfor="exampleInputEmail1">Email address</label>
+          <label if="exampleInputEmail1">Email address</label>
           <input
             type="email"
             className="form-control"
@@ -19,7 +19,7 @@ const signupform = () => {
           </small>
         </div>
         <div className="form-group">
-          <label htmlfor="exampleInputPassword1">Password</label>
+          <label id="exampleInputPassword1">Password</label>
           <input
             type="password"
             className="form-control"
@@ -35,7 +35,7 @@ const signupform = () => {
           ></input>
           <label
             className="form-check-label form-text text-muted "
-            htmlfor="exampleCheck1"
+            id="exampleCheck1"
           >
             <i>Show Password</i>
           </label>
@@ -49,4 +49,4 @@ const signupform = () => {
   );
 };
 
-export default signupform;
+export default signinform;

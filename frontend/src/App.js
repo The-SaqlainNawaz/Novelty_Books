@@ -1,15 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LandingPage from "./pages/EnteryPoint";
+import LandingPage from "./pages/LandingPage/LandingPage";
 import Home from "./pages/HomePage/HomePage";
+import EnteryPoint from "./pages/EnteryPoint";
+import ErrorPage from "./components/404page/404page";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<EnteryPoint />} />
           <Route path="/home" element={<Home />} />
-          <Route path="*" element={<h1>404 Not Found</h1>} />
+          <Route path="/LandingPage" element={<LandingPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
     </>
